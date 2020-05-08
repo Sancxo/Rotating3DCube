@@ -11,7 +11,7 @@ init = () => {
     );
     
     renderer = new THREE.WebGLRenderer({antialias: true});
-    
+    renderer.setClearColor('#FFFFFF');
     renderer.setSize(window.innerWidth, window.innerHeight);
     
     document.body.appendChild(renderer.domElement);
