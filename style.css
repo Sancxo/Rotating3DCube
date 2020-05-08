@@ -1,9 +1,30 @@
 body {
+    box-sizing: border-box;
     margin: 0;
+    overflow: hidden;
     cursor: grab;
 }
-
-canvas {
-    height: 100%;
-    width: 100%;
+div {
+    position: fixed;
+    display: flex;
+}
+#credits {
+    top: 10px;
+    left: 10px;
+}
+button {
+    margin: 2px;
+    border: solid black 1px;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    border-radius: 10px;
+    transition: transform 250ms, border-radius 250ms;
+}
+p {
+    margin: 2px;
+}
+p:hover {
+    cursor: text;
 }
