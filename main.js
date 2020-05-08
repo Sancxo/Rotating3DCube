@@ -1,4 +1,5 @@
 let scene, camera, renderer, cube;
+let controls;
 
 init = () => {
     scene = new THREE.Scene();
@@ -25,6 +26,8 @@ init = () => {
     scene.add(cube);
     
     camera.position.z = 4;
+
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
 }
 
 animate = () => {
@@ -46,3 +49,9 @@ window.addEventListener('resize', onWindowResize, false);
 
 init();
 animate();
+document.addEventListener('mousedown', function () {
+        document.body.style.cursor = 'grabbing';
+})
+document.addEventListener('mouseup', function() {
+    document.body.style.cursor = 'grab';
+})
